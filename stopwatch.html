@@ -1,6 +1,8 @@
 <!-- 
-    HW6 Starter code
-     Modified from: https://codepen.io/cathydutton/pen/GBcvo
+    Connor King
+    CPSC 322
+    Fall 2022
+    Starter Code Modified from: https://codepen.io/cathydutton/pen/GBcvo
     -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,15 +11,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW6 - JQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
     <script>
         window.onload = function () {
             var seconds = 00;
             var tens = 00;
-            var appendTens = document.getElementById("tens")
-            var appendSeconds = document.getElementById("seconds")
-            var buttonStart = document.getElementById('button-start');
-            var buttonStop = document.getElementById('button-stop');
-            var buttonReset = document.getElementById('button-reset');
+
+            //Modified DOM selectors to be JQuery selectors
+            var appendTens = $("#tens");
+            var appendSeconds = $("#seconds");
+            var buttonStart = $("#button-start");
+            var buttonStop = $("#button-stop");
+            var buttonReset = $("#button-reset");
             var interval;
 
             buttonStart.onclick = function () {
