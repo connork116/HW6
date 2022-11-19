@@ -26,14 +26,23 @@
 
             var interval;
 
+            // Adding class to timer 
+            $("#timer").addClass("timer-background");
+
             $buttonStart.click(() => {
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
+
+                //Changing background color when timer is running
+                $(".timer-background").css("background-color", "green");
             });
 
 
             $buttonStop.click(() => {
                 clearInterval(interval);
+
+                //Changing background color when timer is stopped
+                $(".timer-background").css("background-color", "red");
             });
 
             $buttonReset.click(() => {
@@ -42,6 +51,9 @@
                 seconds = "00";
                 $appendTens.html = tens;
                 $appendSeconds.html = seconds;
+
+                //Changing background color to the default color when timer is reset
+                $(".timer-background").css("background-color", "grey");
             });
 
             function startTimer() {
@@ -68,14 +80,18 @@
                 }
             }
 
-            // Adding class to timer 
-            $("#timer").addClass("timer-background");
+
         })
     </script>
 
     <style>
         .timer-background {
-            background-color: lightseagreen;
+            background-color: grey;
+        }
+
+        #timer {
+            text-align: center;
+            font-size: 32pt
         }
     </style>
 </head>
