@@ -29,6 +29,16 @@
             // Adding class to timer 
             $("#timer").addClass("timer-background");
 
+            // Adding styling to buttons
+            $("#button-start").addClass("button");
+            $("#button-stop").addClass("button");
+            $("#button-reset").addClass("button");
+
+            $(".button").css({
+                "background-color": "deepskyblue", "font-size": "24pt", "margin": "10px",
+                "padding": "7px", "font-weight": "bold", "box-shadow": "8px 3px 3px black"
+            });
+
             $buttonStart.click(() => {
                 clearInterval(interval);
                 interval = setInterval(startTimer, 10);
@@ -93,17 +103,25 @@
             text-align: center;
             font-size: 32pt
         }
+
+        #button-holder {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <h1>Stopwatch</h1>
-        <h2>Vanilla JavaScript Stopwatch</h2>
+        <h2>JQuery JavaScript Stopwatch</h2>
         <p id="timer"><span id="seconds">00</span>:<span id="tens">00</span></p>
-        <button id="button-start">Start</button>
-        <button id="button-stop">Stop</button>
-        <button id="button-reset">Reset</button>
+
+        <p id="button-holder">
+            <button id="button-start">Start</button>
+            <button id="button-stop">Stop</button>
+            <button id="button-reset">Reset</button>
+        </p>
+
     </div>
 </body>
 
