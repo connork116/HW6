@@ -45,6 +45,11 @@
 
                 //Changing background color when timer is running
                 $(".timer-background").css("background-color", "green");
+
+                setInterval(function () {
+                    $(".timer-background").css("opacity", "0.8");
+                }, 1000);
+
             });
 
 
@@ -53,6 +58,10 @@
 
                 //Changing background color when timer is stopped
                 $(".timer-background").css("background-color", "red");
+
+                setInterval(function () {
+                    $(".timer-background").css("opacity", "1.0");
+                }, 1000);
             });
 
             $buttonReset.click(() => {
@@ -64,6 +73,11 @@
 
                 //Changing background color to the default color when timer is reset
                 $(".timer-background").css("background-color", "grey");
+
+                setInterval(function () {
+                    $(".timer-background").css("opacity", "1.0");
+                }, 1000);
+
             });
 
             function startTimer() {
